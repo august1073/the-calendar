@@ -1,0 +1,29 @@
+{
+  "name": "the-calendar",
+  "version": "1.0.0",
+  "description": "A shared calendar application",
+  "main": "server.js",
+  "scripts": {
+    "test": "run, \"node server\"",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/august1073/the-calendar.git"
+  },
+  "keywords": [
+    "node",
+    "calendar"
+  ],
+  "author": "August Money",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/august1073/the-calendar/issues"
+  },
+  "homepage": "https://github.com/august1073/the-calendar#readme",
+  "dependencies": {
+    "good": "^6.3.0",
+    "good-console": "^5.0.3",
+    "hapi": "^9.0.3"
+  }
+}
