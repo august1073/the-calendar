@@ -21,6 +21,24 @@ server.route({
   }
 });
 
-server.start(function () {
-  console.log('Server runnign @: ', server.info.uri);
+server.register({
+  register: Good,
+  options: {
+    reporters: [{
+      reporter: require('good-console'),
+      events: {
+        response: '*',
+        log: '*'
+      }
+    }]
+  }
+}, function(err) {
+  if (err) {
+    throw err; //something bad happened loading the plugin
+  }
+
+  server.start(function() {
+    console.log('Server running @: ', server.info.uri);
+    server.log('info', 'Server running at: ' + server.info.uri);
+  });
 });
